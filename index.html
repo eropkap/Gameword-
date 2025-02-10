@@ -6,62 +6,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sex Night</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            background-color: #111;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        button {
+            background-color: #880000;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            margin: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: #aa0000;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+
+<style>
+    body {
+        background: url('images/background.jpg') no-repeat center center fixed;
+        background-size: cover;
+    }
+    #game {
+        background: rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        border-radius: 10px;
+    }
+    .card {
+        width: 250px;
+        height: 350px;
+        background: url('images/card_back.png') no-repeat center center;
+        background-size: cover;
+        margin: auto;
+        position: relative;
+    }
+    .card img {
+        width: 100%;
+        height: 100%;
+        display: none;
+    }
+    .show-card img {
+        display: block;
+    }
+</style>
 </head>
 <body>
     <div id="menu">
-        <h1>Добро пожаловать в игру!</h1>
+        <h1>🔥 Добро пожаловать в горячую игру! 🔥</h1>
         <button id="start-game">Начать</button>
     </div>
 
-    <div id="game" style="display: none;">
+    <div id="mode-selection" class="hidden">
         <h2>Выберите режим:</h2>
         <button class="mode-button" data-mode="normal">Обычный</button>
         <button class="mode-button" data-mode="hard">Хард</button>
         <button class="mode-button" data-mode="extreme">Экстрим</button>
         <button class="mode-button" data-mode="roleplay">Ролевая игра</button>
         <button class="mode-button" data-mode="porn">Порно</button>
+    </div>
 
+    <div id="game" class="hidden">
         <h2>Карточка:</h2>
-        <p id="card-display">Нажмите "Далее", чтобы получить карточку.</p>
+        <p id="card-display">Выберите режим, чтобы получить карточку.</p>
         <button id="next-card">Далее</button>
-
-        <h2>Штраф:</h2>
-        <p id="penalty-display">Нажмите "Штраф", если не выполнили задание.</p>
         <button id="penalty-button">Штраф</button>
-
-        <h2>Настройки:</h2>
-        <button id="settings-button">Открыть настройки</button>
-        <div id="settings-panel" style="display: none;">
-            <button id="toggle-sound">Вкл/Выкл звук</button>
-            <button id="toggle-theme">Сменить тему</button>
-        </div>
     </div>
 
     <script src="js/script.js"></script>
-<img src="images/back_button.png" style="display:none;">
-<img src="images/background.jpg" style="display:none;">
-<img src="images/button_start.png" style="display:none;">
-<img src="images/card_back.png" style="display:none;">
-<img src="images/card_front.png" style="display:none;">
-<img src="images/control.png" style="display:none;">
-<img src="images/extreme.png" style="display:none;">
-<img src="images/hard.png" style="display:none;">
-<img src="images/home.png" style="display:none;">
-<img src="images/icon.png" style="display:none;">
-<img src="images/icon_game.png" style="display:none;">
-<img src="images/menu_icon.png" style="display:none;">
-<img src="images/next.png" style="display:none;">
-<img src="images/normal.png" style="display:none;">
-<img src="images/penalty.png" style="display:none;">
-<img src="images/porn.png" style="display:none;">
-<img src="images/roleplay.png" style="display:none;">
-<img src="images/silent.png" style="display:none;">
-<img src="images/spin.png" style="display:none;">
-<img src="images/wheel.png" style="display:none;">
-<img src="images/wheel_small.png" style="display:none;">
-<img src="sounds/game_sound.mp3" style="display:none;">
-<img src="sounds/intense_music.mp3" style="display:none;">
-<img src="sounds/romantic_music.mp3" style="display:none;">
-<img src="sounds/sensual_music.mp3" style="display:none;">
 </body>
 </html>
